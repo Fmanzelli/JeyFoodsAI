@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jey Foods | Artesanal Com Amor</title>
+    <title>Jey Foods | Doces e Salgados Artesanais Feitos com Amor</title>
+    <meta name="description" content="A Jey Foods é sua doceria e cozinha artesanal que transforma ingredientes simples em momentos extraordinários. Peça empadões cremosos, cookies recheados e combos para a família.">
+    <meta name="keywords" content="doces artesanais, salgados finos, comprar empadão, cookies recheados, confeitaria, Jey Foods, comida artesanal">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" type="image/png" href="assets/Logo%20sem%20fundo%20-%20Jey%20Foods.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +20,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Jey Foods",
+      "image": "https://www.jeyfoods.com.br/assets/Logo%20sem%20fundo%20-%20Jey%20Foods.png",
+      "description": "Doceria e cozinha artesanal especializada em cookies recheados, empadões e combos para a família.",
+      "telephone": "+55-41-99538-2815",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Curitiba",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "servesCuisine": "Confeitaria"
+    }
+    </script>
 </head>
 
 <body>
@@ -24,8 +47,10 @@
         <!-- Navbar -->
         <header class="navbar">
             <div class="logo">
-                <img src="assets/Logo sem fundo - Jey Foods.png" alt="Jey Foods Logo"
-                    onerror="this.outerHTML='<h1 class=\'text-logo\'>Jey Foods</h1>'">
+                <a href="index.html">
+                    <img src="assets/Logo sem fundo - Jey Foods.png" alt="Jey Foods Logo"
+                        onerror="this.outerHTML='<span class=\'text-logo\' style=\'display:block;margin-top:10px;\'>Jey Foods</span>'">
+                </a>
             </div>
 
             <button class="mobile-toggle" aria-label="Abrir menu">
@@ -35,6 +60,7 @@
             <nav class="nav-links">
                 <a href="#inicio" class="active">Início</a>
                 <a href="cardapio.html">Cardápio</a>
+                <a href="revendedores.html">Revendedores</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -43,7 +69,7 @@
         <!-- Carousel / Hero Content -->
         <div class="hero-content">
             <div class="hero-text">
-                <h2>Sabor Artesanal em Cada Detalhe</h2>
+                <h1>Sabor Artesanal em Cada Detalhe</h1>
                 <p>Descubra nossa linha premium de doces e salgados feitos com ingredientes selecionados e muito
                     carinho.</p>
                 <a href="cardapio.html" class="cta-button">Ver Cardápio</a>
@@ -98,21 +124,21 @@
         <h2 class="section-title">O que você deseja hoje?</h2>
         <div class="categories-grid">
             <a href="cardapio.html#doces" class="category-card" id="cat-doces">
-                <img src="assets/cookienocopo.png" alt="Categoria Doces">
+                <img src="assets/cookienocopo.png" alt="Categoria Doces" loading="lazy">
                 <div class="card-content">
                     <h3>Doces</h3>
                     <span class="card-link">Explorar <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
             <a href="cardapio.html#salgados" class="category-card" id="cat-salgados">
-                <img src="assets/salgados_demo.jpg" alt="Categoria Salgados">
+                <img src="assets/salgados_demo.jpg" alt="Categoria Salgados" loading="lazy">
                 <div class="card-content">
                     <h3>Empadões</h3>
                     <span class="card-link">Explorar <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
             <a href="cardapio.html#kits" class="category-card" id="cat-kits">
-                <img src="assets/kit_demo.png" alt="Categoria Kits">
+                <img src="assets/kit_demo.png" alt="Categoria Kits" loading="lazy">
                 <div class="card-content">
                     <h3>Combos</h3>
                     <span class="card-link">Explorar <i class="fas fa-arrow-right"></i></span>
@@ -160,6 +186,9 @@
 
             <div class="footer-social">
                 <h3>Conecte-se</h3>
+                <a href="https://wa.me/5541995382815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Jey%20Foods." target="_blank" class="social-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
                 <a href="https://www.instagram.com/jeyfoods/" target="_blank" class="social-btn instagram">
                     <i class="fab fa-instagram"></i> Instagram (@jeyfoods)
                 </a>
@@ -172,6 +201,14 @@
 
     <!-- JS -->
     <script src="js/script.js"></script>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/5541995382815?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido." class="floating-whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 
 </html>

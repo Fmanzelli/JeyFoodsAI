@@ -72,7 +72,7 @@ a {
     width: 100%;
     min-height: 100vh;
     /* Fundo escuro texturizado; a imagem é o hero_bg, tem fallback pra gradiente solido se falhar */
-    background: linear-gradient(to bottom, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.65)), url('/assets/hero_bg.jpg') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.65)), url('../assets/hero_bg.jpg') center/cover no-repeat;
     background-color: var(--dark-bg);
     display: flex;
     flex-direction: column;
@@ -225,6 +225,7 @@ a {
     max-width: 800px;
 }
 
+.hero-text h1,
 .hero-text h2 {
     font-size: 4rem;
     color: var(--white);
@@ -643,6 +644,13 @@ a {
 
 .social-btn.instagram:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.social-btn.whatsapp:hover {
+    background: #25D366;
     border-color: transparent;
     color: var(--white);
     transform: translateY(-3px);
@@ -1102,6 +1110,146 @@ a {
     text-align: right;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
+}
+
+/* ---- 7. Revendedores Exclusivo ---- */
+.reseller-hero {
+    /* Usando o mesmo fundo premium escuro da home para ficar elegante e legível */
+    background: linear-gradient(to bottom, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.7)), url('../assets/hero_bg.jpg') center/cover no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reseller-hero-content {
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.reseller-hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.reseller-hero-content p {
+    color: #f3f4f6; /* Cor clara e legível */
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    line-height: 1.6;
+}
+
+.hero-benefits {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.benefit-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    color: var(--gold);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.benefit-badge:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    border-color: var(--primary-light);
+}
+
+/* ---- 8. Floating Actions (WhatsApp & Back to Top) ---- */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition-fast);
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: var(--white);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-bg);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+}
+
+@media (max-width: 768px) {
+    .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+    
+    .back-to-top {
+        bottom: 85px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
 }
 
 /* Resposividad Menu */
