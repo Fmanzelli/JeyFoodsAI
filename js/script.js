@@ -252,4 +252,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- 7. Scroll Animations (.fade-in) --- */
+    const faders = document.querySelectorAll('.fade-in');
+    
+    // Only set up observer if items exist
+    if (faders.length > 0) {
+        const fadeOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, fadeOptions);
+
+        faders.forEach(fader => {
+            fadeObserver.observe(fader);
+        });
+    }
+
 });
