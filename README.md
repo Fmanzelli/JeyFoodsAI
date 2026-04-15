@@ -1,3 +1,5 @@
+<img width="1902" height="868" alt="Captura de tela 2026-04-15 092528" src="https://github.com/user-attachments/assets/1264d1c9-3542-4ffc-acc1-634e097056f4" />
+<img width="1893" height="862" alt="Captura de tela 2026-04-15 092615" src="https://github.com/user-attachments/assets/9e30b86a-17f2-4491-ae69-8550fc9a384e" />
 # Jey Foods - E-Commerce Showcase (Frontend)
 
 <p align="center">
