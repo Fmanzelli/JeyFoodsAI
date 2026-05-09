@@ -41,9 +41,6 @@ const b2bNew = `<!-- Seção Revendedores (B2B) -->
                     <i class="fab fa-whatsapp"></i> Consulte nossos preços
                 </a>
             </div>
-            <div class="b2b-image">
-                <img src="assets/doces_demo.jpg" alt="Produtos em Atacado para Revenda" onerror="this.src='assets/doces_demo.jpg'">
-            </div>
         </div>
     </section>
 
